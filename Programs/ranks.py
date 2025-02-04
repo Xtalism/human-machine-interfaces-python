@@ -1,0 +1,5 @@
+phrase = input('Enter any phrase: ')
+print(phrase[::-1])
+print(phrase[2::2])
+print(phrase)
+print(phrase.upper())
