@@ -21,12 +21,12 @@
 # except ValueError:
 #     print('You must enter an int value number')
 
-#     for i in [1, 2, 3, 4, 5, 'Yes', 'Word']:
-#         print(f'Your current value is {i}', end=',')
+# for i in [1, 2, 3, 4, 5, 'Yes', 'Word']:
+#     print(f'Your current value is {i}', end=',')
 
-#     for i in [1, 3, 5, 7]:
-#         x = i**2 - (i - 1) + (i + 2)
-#         print(x)
+for i in [1, 3, 5, 7]:
+    x = i**2 - (i - 1) + (i + 2)
+    print(x)
 
-for i in range(50000000000, 0, -1):
-    print(i)
+# for i in range(5, 0, -1):
+#     print(i)
