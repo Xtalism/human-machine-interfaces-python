@@ -16,7 +16,7 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QLabel, QLineEdit, QMainWindow,
-    QPlainTextEdit, QPushButton, QSizePolicy, QWidget)
+    QPushButton, QSizePolicy, QTextEdit, QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -40,9 +40,12 @@ class Ui_MainWindow(object):
         self.label_2 = QLabel(self.centralwidget)
         self.label_2.setObjectName(u"label_2")
         self.label_2.setGeometry(QRect(230, 50, 49, 16))
-        self.plainTextEdit = QPlainTextEdit(self.centralwidget)
-        self.plainTextEdit.setObjectName(u"plainTextEdit")
-        self.plainTextEdit.setGeometry(QRect(340, 70, 104, 71))
+        self.textEdit = QTextEdit(self.centralwidget)
+        self.textEdit.setObjectName(u"textEdit")
+        self.textEdit.setGeometry(QRect(350, 80, 104, 41))
+        self.label_3 = QLabel(self.centralwidget)
+        self.label_3.setObjectName(u"label_3")
+        self.label_3.setGeometry(QRect(380, 50, 49, 16))
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -55,5 +58,6 @@ class Ui_MainWindow(object):
         self.additionButton.setText(QCoreApplication.translate("MainWindow", u"Addition", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"Data A", None))
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"Data B", None))
+        self.label_3.setText(QCoreApplication.translate("MainWindow", u"Result", None))
     # retranslateUi
 
