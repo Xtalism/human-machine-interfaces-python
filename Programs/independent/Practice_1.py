@@ -1,0 +1,1 @@
+print('Hola soy Manuel Piña Olivas, soy estudiante del semestre 10 en la carrera de mecatronica')
