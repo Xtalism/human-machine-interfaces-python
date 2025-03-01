@@ -26,8 +26,8 @@ class main(QMainWindow, Ui_MainWindow):
             }
             
             df = pd.DataFrame(data)
-            filename, _ =QFileDialog.getSaveFileName(self, caption='Save excel', 
-                                                     filter = 'Excel file(*.xlsx)')
+            filename, _ = QFileDialog.getSaveFileName(self, caption='Save excel', 
+                                                      filter = 'Excel file(*.xlsx)')
             if filename:
                 df.to_excel(filename, index = False)
                 QMessageBox.information(self, 'Saved', 'Saved File')
