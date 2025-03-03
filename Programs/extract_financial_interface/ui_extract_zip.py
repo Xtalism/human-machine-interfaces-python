@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'extract_zipQyYFUN.ui'
+## Form generated from reading UI file 'extract_zipaMPyLP.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.8.1
 ##
@@ -31,10 +31,10 @@ class Ui_MainWindow(object):
         self.table.setGeometry(QRect(80, 110, 911, 701))
         self.textFile = QTextEdit(self.centralwidget)
         self.textFile.setObjectName(u"textFile")
-        self.textFile.setGeometry(QRect(80, 60, 811, 31))
+        self.textFile.setGeometry(QRect(80, 50, 811, 41))
         self.extractButton = QPushButton(self.centralwidget)
         self.extractButton.setObjectName(u"extractButton")
-        self.extractButton.setGeometry(QRect(920, 60, 75, 31))
+        self.extractButton.setGeometry(QRect(920, 50, 75, 31))
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)

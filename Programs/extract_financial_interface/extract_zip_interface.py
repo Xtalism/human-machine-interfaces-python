@@ -36,7 +36,7 @@ class main(QMainWindow, Ui_MainWindow):
 
         output_filename = path + 'extracto.xlsx'
         if output_filename:
-            df.to_excel(filename, index = False)
+            df.to_excel(output_filename, index = False)
             QMessageBox.information(self, 'Saved', 'Saved File')
                             
 if __name__ == '__main__':
