@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>RegisterScreen</class>
+ <widget class="QMainWindow" name="RegisterScreen">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>260</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QSpinBox" name="semester">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>200</y>
+      <width>42</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QCalendarWidget" name="calendar">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>30</y>
+      <width>331</width>
+      <height>191</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="name">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>40</y>
+      <width>351</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="surname">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>90</y>
+      <width>351</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="address">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>140</y>
+      <width>351</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="seeRegister">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>200</y>
+      <width>75</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>See Register</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="addRecord">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>200</y>
+      <width>75</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Add Record</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="nameLabel">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>20</y>
+      <width>49</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Name</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="surnameLabel">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>70</y>
+      <width>49</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Surname</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="directionLabel">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>120</y>
+      <width>49</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Direction</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="semesterLabel">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>170</y>
+      <width>49</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Semester</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
