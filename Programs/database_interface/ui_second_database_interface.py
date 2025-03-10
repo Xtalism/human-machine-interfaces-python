@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'second_database_interfacezYhmmV.ui'
+## Form generated from reading UI file 'second_database_interfacenokhWN.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.8.1
 ##
@@ -22,15 +22,15 @@ class Ui_TableScreen(object):
     def setupUi(self, TableScreen):
         if not TableScreen.objectName():
             TableScreen.setObjectName(u"TableScreen")
-        TableScreen.resize(816, 453)
+        TableScreen.resize(557, 453)
         self.centralwidget = QWidget(TableScreen)
         self.centralwidget.setObjectName(u"centralwidget")
         self.returnButton = QPushButton(self.centralwidget)
         self.returnButton.setObjectName(u"returnButton")
-        self.returnButton.setGeometry(QRect(680, 400, 75, 24))
+        self.returnButton.setGeometry(QRect(430, 400, 75, 24))
         self.table = QTableWidget(self.centralwidget)
         self.table.setObjectName(u"table")
-        self.table.setGeometry(QRect(50, 20, 711, 371))
+        self.table.setGeometry(QRect(50, 20, 451, 371))
         TableScreen.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(TableScreen)
