@@ -1,14 +1,10 @@
-import sys, smtplib, random, os, numpy as np
+import sys, smtplib, random, credentials, numpy as np
 from PyQt6 import uic
 from PyQt6.QtWidgets import *
 from email import encoders
 from email.mime.base import MIMEBase
-from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from ui_email_randint_interface import Ui_MainWindow
-
-user = 'manuellego1234@gmail.com'
-password = 'ztkwtfffqfuwyeik'
 
 class main(QMainWindow, Ui_MainWindow):
     def __init__(self, parent=None):
@@ -42,17 +38,18 @@ class main(QMainWindow, Ui_MainWindow):
         self.randomNumbers.addItems(minor)
         self.arrangedNumbers.addItems(major)
 
-        with open('menores.txt', 'w') as menores_txt:
-            menores_txt.write('Data: \n' + '\n'.join(minor) + '\n')
-            menores_txt.write(f'Variance: {variance_minors:.2f}\n')
-            menores_txt.write(f'Deviation: {deviationstd_minors:.2f}\n')
-            menores_txt.write(f'Average: {average_minors:.2f}\n')
+        with open('menores.txt', 'w') as minor_txt:
+            minor_txt.write(f'Variance: {variance_minors:.2f}\n')
+            minor_txt.write(f'Deviation: {deviationstd_minors:.2f}\n')
+            minor_txt.write(f'Average: {average_minors:.2f}\n')
+            minor_txt.write('Data: \n' + '\n'.join(minor) + '\n')
 
-        with open('mayores.txt', 'w') as mayores_txt:
-            mayores_txt.write('Data: \n' + '\n'.join(major) + '\n')
-            mayores_txt.write(f'Variance: {variance_majors:.2f}\n')
-            mayores_txt.write(f'Deviation: {deviationstd_majors:.2f}\n')
-            mayores_txt.write(f'Average: {average_majors:.2f}\n')
+        with open('mayores.txt', 'w') as major_txt:
+            major_txt.write(f'Variance: {variance_majors:.2f}\n')
+            major_txt.write(f'Deviation: {deviationstd_majors:.2f}\n')
+            major_txt.write(f'Average: {average_majors:.2f}\n')
+            major_txt.write('Data: \n' + '\n'.join(major) + '\n')
+        
         self.email_login()
                 
     def email_login(self):
@@ -61,7 +58,7 @@ class main(QMainWindow, Ui_MainWindow):
             self.server.ehlo()
             self.server.starttls()
             self.server.ehlo()
-            self.server.login(user, password)
+            self.server.login(credentials.user, credentials.password)
             
             self.sendButton.setEnabled(True)
             self.addressText.setEnabled(True)
@@ -76,22 +73,17 @@ class main(QMainWindow, Ui_MainWindow):
             QMessageBox.critical(self, 'Server Error', 'Verify server name')
         
     def attachments(self):
-        majors = '$PWD\\mayores.txt'
-        minors = '$PWD\\menores.txt'
-
-        def open_file(file, path):            
+        
+        def open_file(file):            
             with open(file, 'rb') as attachment:
-                filename = path[path.rfind('\\')+1:]
-                
                 archives = MIMEBase('application', 'octet-stream')
                 archives.set_payload(attachment.read())
                 encoders.encode_base64(archives)
-                archives.add_header('Content-Disposition', f'attachment; filename = {filename}')
+                archives.add_header('Content-Disposition', f'attachment; filename = {file}')
                 self.msg.attach(archives)
             
-        open_file('mayores.txt', majors)
-        open_file('menores.txt', minors)
-            
+        open_file('mayores.txt')
+        open_file('menores.txt')
         self.send_email()
                 
     def send_email(self):
@@ -100,11 +92,11 @@ class main(QMainWindow, Ui_MainWindow):
         
         if response == QMessageBox.StandardButton.Yes:
             try:
-                self.msg['From'] = user
+                self.msg['From'] = credentials.user
                 self.msg['To'] = self.addressText.text()
                 self.msg['Subject'] = 'Random generated data'
                 text = self.msg.as_string()
-                self.server.sendmail(user, self.addressText.text(), text)
+                self.server.sendmail(credentials.user, self.addressText.text(), text)
                 QMessageBox.information(self, 'Confirmation', 'Email has been sent!')
                 
             except:
