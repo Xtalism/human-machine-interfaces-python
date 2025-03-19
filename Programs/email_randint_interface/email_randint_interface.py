@@ -73,7 +73,6 @@ class main(QMainWindow, Ui_MainWindow):
             QMessageBox.critical(self, 'Server Error', 'Verify server name')
         
     def attachments(self):
-        
         def open_file(file):            
             with open(file, 'rb') as attachment:
                 archives = MIMEBase('application', 'octet-stream')
