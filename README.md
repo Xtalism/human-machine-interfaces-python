@@ -1,3 +1,5 @@
+# Human Machine Interfaces with PyQt6.
+
 To install dependencies:
 
 ```shell
