@@ -2,7 +2,6 @@ import sys, re, numpy as np
 from PyQt6.QtWidgets import *
 from PyQt6 import uic
 from ui_interface19 import Ui_MainWindow
-
 class main(QMainWindow, Ui_MainWindow):
     def __init__(self):
         super(main, self).__init__()
