@@ -1,12 +1,12 @@
 import sys, random, numpy as np
 from PyQt6 import uic
 from PyQt6.QtWidgets import *
-from ui_interface_21 import Ui_MainWindow
+from ui_arrange_numbers_interface import Ui_MainWindow
 
 class main(QMainWindow, Ui_MainWindow):
     def __init__(self):
         super(main, self).__init__()
-        uic.loadUi('interface_21.ui', self)
+        uic.loadUi('arrange_numbers_interface.ui', self)
         self.buttonWrite.clicked.connect(self.generate_data)
 
     def generate_data(self):

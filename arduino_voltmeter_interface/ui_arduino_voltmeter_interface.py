@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'interface_20yuJuHj.ui'
+## Form generated from reading UI file 'arduino_voltmeter_interfacecmJtCh.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.8.1
 ##
@@ -15,25 +15,19 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QMainWindow, QPlainTextEdit, QPushButton,
-    QSizePolicy, QTextBrowser, QWidget)
+from PySide6.QtWidgets import (QApplication, QLCDNumber, QMainWindow, QSizePolicy,
+    QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(800, 600)
+        MainWindow.resize(256, 119)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
-        self.filePath = QTextBrowser(self.centralwidget)
-        self.filePath.setObjectName(u"filePath")
-        self.filePath.setGeometry(QRect(100, 50, 601, 21))
-        self.openFile = QPushButton(self.centralwidget)
-        self.openFile.setObjectName(u"openFile")
-        self.openFile.setGeometry(QRect(20, 50, 75, 24))
-        self.text = QPlainTextEdit(self.centralwidget)
-        self.text.setObjectName(u"text")
-        self.text.setGeometry(QRect(100, 100, 601, 451))
+        self.potValue = QLCDNumber(self.centralwidget)
+        self.potValue.setObjectName(u"potValue")
+        self.potValue.setGeometry(QRect(50, 30, 161, 51))
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -43,6 +37,5 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
-        self.openFile.setText(QCoreApplication.translate("MainWindow", u"Open File", None))
     # retranslateUi
 

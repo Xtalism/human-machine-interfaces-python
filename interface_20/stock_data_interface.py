@@ -1,12 +1,12 @@
 import sys, os, numpy as np
 from PyQt6 import uic
 from PyQt6.QtWidgets import QFileDialog, QApplication, QMainWindow, QMessageBox
-from ui_interface_20 import Ui_MainWindow
+from ui_stock_data_interface import Ui_MainWindow
 
 class StockAnalyzer(QMainWindow, Ui_MainWindow):
     def __init__(self):
         super().__init__()
-        uic.loadUi('interface_20.ui', self)
+        uic.loadUi('stock_data_interface.ui', self)
         self.select_file_button.clicked.connect(self.browse_file)
         self.process_button.clicked.connect(self.process_stock_data)
 
