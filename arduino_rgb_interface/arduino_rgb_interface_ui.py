@@ -16,18 +16,15 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QFrame, QLabel, QLineEdit,
-    QMainWindow, QPushButton, QSizePolicy, QWidget)
+    QMainWindow, QSizePolicy, QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(501, 221)
+        MainWindow.resize(501, 202)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
-        self.displayColor = QPushButton(self.centralwidget)
-        self.displayColor.setObjectName(u"displayColor")
-        self.displayColor.setGeometry(QRect(110, 160, 111, 24))
         self.redColor = QLineEdit(self.centralwidget)
         self.redColor.setObjectName(u"redColor")
         self.redColor.setGeometry(QRect(110, 40, 113, 22))
@@ -60,7 +57,6 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
-        self.displayColor.setText(QCoreApplication.translate("MainWindow", u"Display Color", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"R", None))
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"G", None))
         self.label_3.setText(QCoreApplication.translate("MainWindow", u"B", None))

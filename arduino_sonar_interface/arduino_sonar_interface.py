@@ -2,7 +2,6 @@ import sys, time
 from PyQt6 import QtCore, uic
 from PyQt6.QtWidgets import *
 from pymata4 import pymata4
-from ui_arduino_sonar_interface import Ui_MainWindow
 
 board = pymata4.Pymata4()
 ECHO = 2
@@ -39,7 +38,7 @@ class worker(QtCore.QObject):
             time.sleep(0.1)
         self.finish.emit()
     
-class reading(QMainWindow, Ui_MainWindow):
+class reading(QMainWindow):
     def __init__(self, parent=None): 
         super(reading, self).__init__(parent)
         uic.loadUi('arduino_sonar_interface.ui', self)

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'arduino_rgb_interfaceSZyBHY.ui'
+## Form generated from reading UI file 'arduino_rgb_interface_201060.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.8.1
 ##
