@@ -23,28 +23,6 @@
    <string notr="true">background-color: rgb(0, 255, 255);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>520</x>
-      <y>530</y>
-      <width>61</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-image: url(:/newPrefix/joy.png);</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap resource="imagen.qrc">:/newPrefix/joy.png</pixmap>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
-    </property>
-   </widget>
    <widget class="QFrame" name="frame">
     <property name="geometry">
      <rect>
@@ -107,7 +85,7 @@
       </property>
      </widget>
     </widget>
-    <widget class="QFrame" name="derecha">
+    <widget class="QFrame" name="right">
      <property name="geometry">
       <rect>
        <x>220</x>
@@ -128,7 +106,7 @@
      <property name="frameShadow">
       <enum>QFrame::Shadow::Raised</enum>
      </property>
-     <widget class="QLabel" name="right">
+     <widget class="QLabel" name="label_4">
       <property name="geometry">
        <rect>
         <x>40</x>
@@ -151,7 +129,7 @@
       </property>
      </widget>
     </widget>
-    <widget class="QFrame" name="abajo">
+    <widget class="QFrame" name="down">
      <property name="geometry">
       <rect>
        <x>120</x>
@@ -172,7 +150,7 @@
      <property name="frameShadow">
       <enum>QFrame::Shadow::Raised</enum>
      </property>
-     <widget class="QLabel" name="down">
+     <widget class="QLabel" name="label_5">
       <property name="geometry">
        <rect>
         <x>40</x>
@@ -259,15 +237,12 @@
      <string>JOYSTICK TESTER</string>
     </property>
    </widget>
-   <zorder>frame</zorder>
-   <zorder>label</zorder>
-   <zorder>label_2</zorder>
   </widget>
  </widget>
  <resources>
   <include location="imagen.qrc"/>
   <include location="imagen.qrc"/>
-  <include location="../Users/luis_/Desktop/imagen.qrc"/>
+  <include location="imagen.qrc"/>
  </resources>
  <connections/>
 </ui>
