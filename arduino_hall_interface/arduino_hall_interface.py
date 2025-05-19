@@ -27,10 +27,10 @@ class HallSensor(QMainWindow):
         self.labelMagnetPolarity : QLabel = self.findChild(QLabel, "magnetPolarity")
 
         self.timer = QTimer(self)
-        self.timer.timeout.connect(self.update_status)
+        self.timer.timeout.connect(self.updateStatus)
         self.timer.start(UPDATE_INTERVAL)
 
-    def update_status(self):
+    def updateStatus(self):
         digitalValue, _ = board.digital_read(HALL_DIGITAL_PIN)
         analogValue, _ = board.analog_read(HALL_ANALOG_PIN)
         

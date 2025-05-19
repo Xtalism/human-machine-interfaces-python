@@ -1,0 +1,4 @@
+{
+    "python.analysis.typeEvaluation.strictListInference": true,
+    "python.analysis.typeEvaluation.enableTypeIgnoreComments": false
+}

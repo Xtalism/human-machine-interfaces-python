@@ -6,7 +6,7 @@ from pymata4 import pymata4
 
 X_PIN = 0
 Y_PIN = 1
-BUTTON_PIN = 2
+# BUTTON_PIN = 2
 
 ACTIVE_COLOR = (0, 255, 0)
 INACTIVE_COLOR = (255, 0, 0)
