@@ -71,9 +71,6 @@ class MainWindow(QMainWindow):
                 self.listWidget.addItem("Error: Malformed data received")
 
     def closeEvent(self, event):
-        self.worker.running = False
-        self.thread.quit()
-        self.thread.wait()
         self.board.shutdown()
         event.accept()
 
